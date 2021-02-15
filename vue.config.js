@@ -6,11 +6,13 @@ log("config 실행");
 module.exports = {
   publicPath: "/",
   outputDir: "dist/todo",
-  resovle: {
-    alias: {
-      "@": path.resolve("src"),
-      "@api": path.resolve("src/api"),
-      "@view": path.resolve("src/views")
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@': path.resolve('src/'),
+        "@api": path.resolve("src/api"),
+        "@view": path.resolve("src/views")
+      }
     }
   }
 }

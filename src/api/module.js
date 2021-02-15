@@ -1,8 +1,12 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost/todo",
-  timeout: 10000
+  baseURL: "http://localhost/",
+  timeout: 10000,
+  auth: {
+    username: 'user2',
+    password: 'user2'
+  }
 });
 
 export function post(uri, params) {
